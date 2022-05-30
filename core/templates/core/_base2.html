@@ -1,0 +1,52 @@
+<!--This template is based on: https://dribbble.com/shots/6531694-Marketing-Dashboard by Gregoire Vella -->
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{% block tajuk %} abuzahrah2022 {% endblock tajuk %}</title>
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
+    <link rel="icon"href="{% static 'favicon.ico' %}">
+
+    {% tailwind_css %}
+
+    
+    {% block extrahead %} {% endblock extrahead %}
+  </head>
+
+  <body>
+<div class="container">
+<main class="bg-gray-100 dark:bg-gray-800 rounded-2xl h-screen overflow-hidden relative">
+    <div class="flex items-start justify-between">
+        {% comment %} {% include "core/sidenav.html" %} {% endcomment %}
+
+        <div class="flex flex-col w-full pl-0 md:p-4 md:space-y-4">
+            {% include "core/components/header.html" %}
+
+                <div class="overflow-auto h-screen pb-24 pt-2 pr-2 pl-2 md:pt-0 md:pr-0 md:pl-0">
+                    <div class="flex flex-col flex-wrap sm:flex-row ">
+                        {% block content %} {% endblock content %}
+
+
+
+
+
+                    </div>
+                </div>
+        </div>
+    </div>
+</main>
+
+
+
+</div>
+    
+
+    <script src="{% static 'js/htmx.min.js' %}"></script>
+    {% block extrascript %} {% endblock extrascript %}
+
+  </body>
+</html>

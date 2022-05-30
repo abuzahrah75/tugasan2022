@@ -1,0 +1,19 @@
+{% extends "core/_base2.html" %} 
+{% load static %}
+{% block tajuk %} abuzahrah.com: template {% endblock tajuk %}
+{% block extrahead %} {% endblock extrahead %}
+{% block extrascript %} {% endblock extrascript %}
+
+{% block content %}
+
+{% include "core/components/empty_card.html" %}
+<span>&nbsp;</span>
+{% include "core/components/table_template.html" %}
+<span>&nbsp;</span>
+{% comment %} {% include "core/dashboard.html" %} {% endcomment %}
+{% include "core/components/empty_card.html" %}
+
+
+
+
+{% endblock content %}
